@@ -1,0 +1,170 @@
+/*
+ Filename: mediaQueries.css
+ Written by: Jullien McLean (JLJM)
+ Purpose: The css to style mediaQueries.html
+ Date: 9 March, 2020
+ Modification History: 9 March, 2020
+ Original Build
+*/
+
+#navigation {
+	width: 100%;
+	float: left;
+	margin: 0 0 1em 0;
+	padding: 0;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+}
+
+#navigation ul {
+	list-style: none;
+	width: 800px;
+	margin: 0 auto;
+	padding: 0;
+	display: flex;
+    justify-content: center;
+}
+
+#navigation li {
+	float: left; 
+}
+
+#navigation li a {
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+	border-right: 1px solid #ccc;	
+}
+
+#navigation li:first-child a {
+	border-left: 1px solid #ccc; 
+}
+
+#navigation li a:hover {
+	color: #c00;
+	background-color: #fff; 
+}
+
+#hideNav {
+	display: none;
+}
+
+@media screen and (min-width: 900px) {
+	#dropDown{
+		display: none;
+	}
+	#hideNav{
+		display: inherit;
+	}
+
+	#navigation{
+		float: right;
+		border-right:none;
+		vertical-align: middle;
+	}
+
+	#navigation ul{
+		list-style: none;
+		float: right;
+		border-right:none;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	#navigation li{
+		float: right;
+		vertical-align: middle;
+	}
+
+	#navigation li a {
+		display:block;
+		float: right;
+		border-right:none;
+		margin-left: 0;
+	}
+
+	.footer, #main:after {
+		height: 300px;
+	}
+
+	.footer {
+		background-color: black;
+		color: white;
+		text-align: left;
+	}
+
+
+	.footer .listItems {
+		vertical-align: top;
+		text-align: left;
+	}
+}
+
+#main {
+	min-height: 100%;
+	margin-bottom: -300px; 
+}
+#main:after {
+	content: "";
+	display: block;
+}
+
+.boxes {
+	height: 200px;
+	width: 100%;
+	background-color: red;
+	color: #ffffff;
+	text-align: center;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+	.boxes{
+		width: 200px;
+		border-radius: 8px;
+	}
+}
+
+@media screen and (min-width: 1080px) {
+	#flexin{
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.boxes{
+		height: 100px;
+		width: 100px;
+		border-radius: 8px;
+		box-sizing: border-box;
+		align-content: space-between;
+		flex-basis: 34%;
+	}
+}
+
+
+.footer, #main:after {
+	height: 300px; 
+}
+
+.footer {
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+	.footer{
+		height: 400px;
+	}
+}
+
+
+.footer .listItems {
+	margin: 0;
+    vertical-align: middle;
+	line-height: 70px;
+}
